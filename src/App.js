@@ -51,25 +51,24 @@ function App() {
 
   return (
     <div>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Title</th>
-            </tr>
-            {users &&
-              users.map((user, idx) => (
-                <tr key={idx}>
-                  <td>{user.firstName}</td>
-                  <td>{user.lastName}</td>
-                  <td>{user.title}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
-      </li>
+      <table>
+        <tbody>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Title</th>
+          </tr>
+          {users &&
+            users.map((user, idx) => (
+              <tr key={idx}>
+                <td>{user.firstName}</td>
+                <td>{user.lastName}</td>
+                <td>{user.title}</td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
+
       <p>{loading ? 'Loading...' : ''}</p>
       <h3>
         Current Page: {currentPage} of {totalPages}
