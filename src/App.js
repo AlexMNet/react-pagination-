@@ -15,7 +15,7 @@ function App() {
     setLoading(true)
     fetch(url, {
       headers: {
-        'app-id': '6212c9988ba4611b800c4fe5',
+        'app-id': process.env.REACT_APP_APP_ID,
       },
     })
       .then((res) => res.json())
